@@ -86,9 +86,15 @@ If you'd like to create new users (also a hacky way to change password) you must
 **Assessment Form:**
 - Number labels on progress bar, ratings scale do not line up exactly
 - Need some conditional functionality for un-selecting radio button tags
+- Inputs no longer allow for typing
+- Header not showing company name properly
+
+**Assessment Review:**
+-Showing all buckets, even when input is empty/out of scope
 
 **See Report:**
-- Nonfunctional. Appears to have been hardcoded and never adjusted.
+-Some styling/layout issues
+-Showing all buckets, even when input is empty/out of scope
 
 **See Overview:**
 - Bucket tabs lack icons, additional styling needed.

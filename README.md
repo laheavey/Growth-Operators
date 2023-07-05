@@ -1,4 +1,9 @@
 # Growth Operators
+*Duration: Five Weeks*
+
+[See Live Demo Here!](https://desolate-everglades-87798.herokuapp.com/)
+
+This app is a prototype customer data platform designed & built to assist local consultancy Growth Operators. The team at Growth Operators asked us to build a tool for them that would make their consultant's assessment & presentation process (known as nextLevel) both lighter and leaner. The resulting product centralizes their workflow, streamlines documentation, and improves user experience.
 
 ## Table of Contents
 
@@ -14,25 +19,18 @@
 - [Known Issues](#known-issues)
     
 
-## Description
+# Approach
 
-This app, working title 'Growth Operators', is designed to assist Growth Operators in centralizing their workflow, improving user experience and streamlining documentation for consultants. The team at Growth Operators asked us to build a tool for them that would make their assessment & presentation process (known as nextLevel) both lighter and leaner. The resulting product enables them to seamlessly create & access client information, review and edit assessment details, and access dynamically created presentations and reports. 
-
-## Built With
-
-- CSS3
-- HTML5
-- Javascript
-- [React](https://reactjs.org/)
-- [React Redux](https://redux.js.org/)
-- [Redux Saga](https://redux-saga.js.org/)
-- [Node.js](https://nodejs.org/en/)
-- [Reveal.js](https://revealjs.com/)
-- [Chart.js](https://www.chartjs.org/)
-- [PostgresQL](https://www.postgresql.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Figma](https://www.figma.com/?fuid=)
-
+### Built With
+- CSS3 / HTML5 / Javascript
+- [Node.js](https://nodejs.org/en/): Building the back-end
+- [Express](https://expressjs.com/en/4x/api.html) / [Axios](https://axios-http.com/docs/intro): Handling requests/responses to APIs and database
+- [React.js](https://reactjs.org/) / [Redux](https://redux.js.org/) / [Redux-Saga](https://redux-saga.js.org/): State management
+- [PostgreSQL](https://www.postgresql.org/) / [Postico 2](https://eggerapps.at/postico2/): Database  and db management
+- [Passport](https://www.passportjs.org/): User authentication, secure login & account management
+- [React](https://reactjs.org/) / [Bootstrap](https://getbootstrap.com/): Front-end styling
+- [Reveal.js](https://revealjs.com/) / [Chart.js](https://www.chartjs.org/): Chart, report, & presentation creation
+  
 # Get Started
 
 ## Prerequisites

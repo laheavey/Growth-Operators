@@ -56,7 +56,6 @@ function* postAssessmentSlideInputsByID (action) {
 }
 
 function* postBucketHeadlineByID (action) {
-    console.log('SAGA Payload: ', action.payload);
     const newHeadline = action.payload;
     try {
         const response = yield axios({
@@ -90,7 +89,6 @@ function* updateAssessmentAnswersByID (action) {
 }
 
 function* updateAllClientAssessmentStatusByID (action) {
-    console.log('SAGA Payload: ', action.payload);
     try {
         const response = yield axios({
             method: 'PUT',
@@ -107,7 +105,6 @@ function* updateAllClientAssessmentStatusByID (action) {
 }
 
 function* updateReviewAssessmentStatusByID (action) {
-    console.log('SAGA Payload: ', action.payload);
     try {
         const response = yield axios({
             method: 'PUT',

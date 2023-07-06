@@ -21,7 +21,6 @@ function CreateNewClientModal() {
             date: dateInput,
             userId: id
         }
-        // console.log('new company', newCompany)
         dispatch({ 
             type: 'SAGA/POST_CLIENT',
             payload: newCompany

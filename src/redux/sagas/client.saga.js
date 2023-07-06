@@ -27,7 +27,6 @@ function* updateClientInfo(action) {
 };
 
 function* updateClientStatus(action) {
-  console.log('Action.payload in Saga: ', action.payload)
   try {
     yield axios.put(`/api/client/${action.payload}/archive`, action.payload)
     yield put({
@@ -53,13 +52,11 @@ function* deleteClient(action) {
 function* postClient(action) {
   try {
     const newCompany = action.payload
-    // console.log(action.payload);
     const clientResponse = yield axios({
       method: 'POST',
       url: '/api/client',
       data: newCompany
     })
-      console.log('new client yeild', clientResponse);
     //   yield axios({
     //     method: 'POST',
     //     url: '/client-assessment',
@@ -77,16 +74,11 @@ function* postClient(action) {
 function* getClientOverview(action) {
   try {
     const clientId = action.payload;
-    console.log("this is the action payload:", clientId)
-
     const response = yield  axios({
       method:  'GET',
       url: '/api/client/overview',
       params: clientId
     })
-    
-    console.log("getclientoverview response", response.data)
-
     yield put({
       type: 'SET_CLIENT_OVERVIEW',
       payload: response.data

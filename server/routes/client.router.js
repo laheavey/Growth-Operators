@@ -25,7 +25,6 @@ router.get('/dashboard', rejectUnauthenticated, (req, res) => {
     const sqlValues = [userId];
     pool.query(sqlText, sqlValues)
         .then((dbRes) => {
-            console.log('operator dashboard', dbRes.rows);
             res.send(dbRes.rows)
         })
         .catch((dbErr) => {
@@ -33,7 +32,6 @@ router.get('/dashboard', rejectUnauthenticated, (req, res) => {
             res.sendStatus(500);
         })
 });
-// added rejectUnauthenticated, -adam
 
 /** ---------- GET ALL CLIENTS ---------- **/
 router.get('/all', rejectUnauthenticated, (req, res) => {
@@ -72,9 +70,7 @@ router.get('/all', rejectUnauthenticated, (req, res) => {
 
 /** ---------- GET (CLIENT OVERVIEW?) ---------- **/
 router.get('/overview', (req, res) => {
-  console.log("hello you are in client overview route in server!", req.query);
   const clientId = parseInt(req.query.clientId);
-  console.log ("This is the client id: ", clientId)
   const sqlQuery =  
   `SELECT 
   assessment_items.id, assessment_items.assessment_id, company_name, assessment_items.findings, assessment_items.impact, assessment_items.recommendations,  assessment_items.phase, assessment_items.level_rating, buckets.name AS bucket_name, tags.name AS tag_name, subfunctions.name AS subfunction_name
@@ -92,7 +88,6 @@ router.get('/overview', (req, res) => {
 
   pool.query(sqlQuery, [clientId])
   .then((response) => {
-    console.log('client overview', response.rows);
     res.send(response.rows);
   })
   .catch((error) => {
@@ -120,10 +115,7 @@ router.post('/', rejectUnauthenticated, (req, res) => {
   ];
   pool.query(queryText, queryValues)
     .then((result) => { 
-      // We need the id of the newly created company/client
-      // console.log('client post id:', result.rows[0].id);
       const newCompanyId = result.rows[0].id;
-
       const insertClientAssessment = `
         INSERT INTO "client_assessments"
         ("client_id", "engagement_date", "status")
@@ -171,8 +163,6 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
 
 /** ---------- DELETE CLIENT ---------- **/
 router.delete('/:id', rejectUnauthenticated, (req, res) => {
-  console.log('Req.body: ', req.body)
-  console.log('Req.params: ', req.params)
   const sqlQuery = `
   DELETE FROM "client"
     WHERE "id" = $1

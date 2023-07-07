@@ -1,7 +1,7 @@
 # Growth Operators
 *Duration: Five Weeks*
 
-[See Live Demo Here!](https://desolate-everglades-87798.herokuapp.com/)
+[See Live Demo Here!](https://next-level.fly.dev/)
 
 This app is a prototype customer data platform designed & built to assist local consultancy Growth Operators. The team at Growth Operators asked us to build a tool for them that would make their consultant's assessment & presentation process (known as nextLevel) both lighter and leaner. The resulting product centralizes their workflow, streamlines documentation, and improves user experience.
 
